@@ -24,6 +24,7 @@ int main(void)
     }
     else {
         printf("I don't understand what are you about\n");
+        return 0;
     }
     printf("Res: %.3f\nPress Enter to close the app\n", result);
     _flushall();
