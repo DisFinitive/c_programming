@@ -11,16 +11,16 @@ int main(void)
     float result;
 
     if(op == '+') {
-        result = (float)a + (float)b;
+        result = a + b;
     }
     else if(op == '-') {
-        result = (float)a - (float)b;
+        result = a - b;
     }
     else if(op == '*') {
-        result = (float)a * (float)b;
+        result = a * b;
     }
     else if(op == '/') {
-        result = (float)a / (float)b;
+        result = a / b;
     }
     else {
         printf("I don't understand what are you about\n");

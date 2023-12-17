@@ -1,5 +1,18 @@
 #include <stdio.h>
 
+#define MENU_C       1
+#define MENU_CPP     2
+#define MENU_JAVA    3
+#define MENU_PYTHON  4
+#define MENU_EXIT    5
+#define TEXT_C       "\n#include <stdio.h>\n\nint main (void)\n{\n    \
+printf (\"Hello, World!\\n\");\n    getchar ();\n    return 0;\n}\n"
+#define TEXT_CPP     "\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n    \
+cout << \"Hello, world!\" <<  '\\n';\n    return 0;\n}\n"
+#define TEXT_JAVA    "\nclass HelloWorld {\n    \
+public static void main(String[] args) {\n        System.out.println(\"Hello World!\");\n    }\n}\n"
+#define TEXT_PYTHON  "\nprint('Hello, World!')\n"
+
 int main(void) 
 {
     int item;
@@ -18,19 +31,19 @@ int main(void)
     } 
 
     switch(item) {
-    case 1:
-        printf("\n#include <stdio.h>\n\nint main (void)\n{\n    printf (\"Hello, World!\\n\");\n    getchar ();\n    return 0;\n}\n");
+    case MENU_C:
+        printf(TEXT_C);
         break;
-    case 2:
-        printf("\n#include <iostream>\nusing namespace std;\n\nint main()\n{\n    cout << \"Hello, world!\" <<  '\\n';\n    return 0;\n}\n");
+    case MENU_CPP:
+        printf(TEXT_CPP);
         break;
-    case 3:
-        printf("\nclass HelloWorld {\n    public static void main(String[] args) {\n        System.out.println(\"Hello World!\");\n    }\n}\n");
+    case MENU_JAVA:
+        printf(TEXT_JAVA);
         break;
-    case 4:
-        printf("\nprint('Hello, World!')\n");
+    case MENU_PYTHON:
+        printf(TEXT_PYTHON);
         break;
-    case 5:
+    case MENU_EXIT:
         return 0;
     default:
         printf("Incorrect symbol");
